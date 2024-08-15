@@ -1,0 +1,21 @@
+{
+    "name": "ai-automated-proposals",
+    "version": "1.0.0",
+    "description": "AI Assistant for Proposal Development",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "mongoose": "^5.10.9",
+        "openai": "^4.53.2",
+        "pupeteer": "^0.0.1",
+        "puppeteer": "^23.0.1"
+    },
+    "author": "Stefan Kløvning",
+    "license": "ISC"
+}

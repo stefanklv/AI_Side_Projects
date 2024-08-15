@@ -5,10 +5,12 @@ def sanitize_path(path):
     # Remove quotes and leading/trailing whitespace
     return path.strip().strip('"').strip("'")
 
-def capture_frames(video_path, output_folder, interval=10):
-    # Sanitize paths
+def capture_frames(video_path, interval=10):
+    # Sanitize path
     video_path = sanitize_path(video_path)
-    output_folder = sanitize_path(output_folder)
+    
+    # Extract the directory of the video file to use as the output folder
+    output_folder = os.path.dirname(video_path)
 
     print(f"Video path: {video_path}")
     print(f"Output folder: {output_folder}")
@@ -75,6 +77,5 @@ def capture_frames(video_path, output_folder, interval=10):
 
 # Usage
 video_path = input("Enter the path to your video file: ")
-output_folder = input("Enter the path for the output folder: ")
 
-capture_frames(video_path, output_folder)
+capture_frames(video_path)
